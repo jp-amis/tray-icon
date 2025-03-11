@@ -23,11 +23,11 @@ use crate::{
 };
 
 pub struct TrayIcon {
-    ns_status_item: Option<Retained<NSStatusItem>>,
+    pub ns_status_item: Option<Retained<NSStatusItem>>,
     tray_target: Option<Retained<TrayTarget>>,
     id: TrayIconId,
     attrs: TrayIconAttributes,
-    mtm: MainThreadMarker,
+    pub mtm: MainThreadMarker,
 }
 
 impl TrayIcon {
